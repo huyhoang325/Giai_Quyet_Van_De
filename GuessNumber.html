@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Number</title>
+</head>
+<body>
+<script>
+    var array = [];
+    for (var i = 0; i <100; i++){
+        array[i] = Math.floor((Math.random()*100)+1);
+    }
+    array.sort(function (a, b) {
+        return a - b;})
+    console.log(array);
+    var guessNum = parseInt(prompt("nhap so can doan"))
+    if (array[49]< guessNum){
+        for (var i = 50; i < array.length; i++){
+            if (array[i]==guessNum){
+                alert("số cần đoán là "+ guessNum + " vị trí index: "+ i);
+                break;
+            }
+        }
+    }else for (var j =0; j < 49; j++){
+        if (array[j]==guessNum){
+            alert("số cần đoán là "+ guessNum + " vị trí index: "+ j)
+            break;
+        }
+    }
+</script>
+</body>
+</html>
